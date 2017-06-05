@@ -1,0 +1,12 @@
+{
+	"directory": "webcontent/public/js/bower_components",
+	"storage": {
+		"packages": "bower/packages",
+		"registry": "bower/registry",
+		"links": "bower/links"
+	},
+	"tmp": "bower/tmp",
+	"ignoredDependencies": [
+	]
+}
+	

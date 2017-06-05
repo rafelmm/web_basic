@@ -1,0 +1,18 @@
+body {
+  font-family: Verdana, sans-serif;
+  color: #666;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-container > * {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=main.css.map */

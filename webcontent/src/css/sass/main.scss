@@ -1,0 +1,21 @@
+$main-color: #666;
+$default-padding: 10px;
+
+body {
+	font-family: Verdana, sans-serif;
+	color: $main-color;
+}
+
+.flex-container {
+	display: flex;  
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.flex-container > * {
+	padding: $default-padding;
+	flex-grow:1;
+}
+
+

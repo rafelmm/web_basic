@@ -1,2 +1,10 @@
 .sass-cache/
 *.css.map
+bower/
+node_modules
+webcontent/bower/
+webcontent/js/bower_components/
+webcontent/css/src/*.css
+public/css/
+public/js/
+
