@@ -1,13 +1,16 @@
 # web_basic
-Basic web project with bower and grunt configuration files
+Basic web project with bower and grunt configuration files.
 
+## Setup
 Download the project and run the following commands: 
-$ npm install
-$ run grunt
+    
+	$ npm install
+    $ grunt
 
 Edit *.sass files and let grunt build *.css and *.min.css files
 
-The structure of the folders is the following:
+## Files and folders
+Files and folder structure is the following:
 - web_basic
 	- bower.json
 	- Gruntfile.js
