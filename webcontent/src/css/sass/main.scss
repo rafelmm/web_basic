@@ -1,20 +1,22 @@
+
 $main-background-color: #e0e0e0;
 $main-color: #333;
 $header-background-color: rgba(50,50,50,0.9);
 $header-color: #FFF;
 $default-padding: 10px;
 
-html {
-	height:100%;
-}
 
+
+/*
+###########################
+     Common properties 
+###########################
+*/
 body {
-	background: $main-background-color url("../img/landing-cliffs.jpg") no-repeat left top fixed;
-	font-family: Verdana, sans-serif;
+	font-family: Gotham SSm, sans-serif;
 	color: $main-color;
-	display: flex;
-	min-height: 100vh;
-	flex-direction:column;
+	font-size: 16px;
+	width: 100%;
 }
 
 a {
@@ -22,24 +24,43 @@ a {
 	text-decoration: none;
 }
 
+
+
+
+/*
+###########################
+          Layout 
+###########################
+*/
+
 header {
+	position: absolute;
+	width: 100%;
 	background-color: $header-background-color;
 	color: $header-color;
 	padding: 15px;
 }
 
 main {
-	flex: 1;
-	background-color: rgba(255,255,255,0.2);
-	padding: 10px 15px;
+	width: 100%;
+	min-height: 100vh;
 }
 
 footer {
+	width:100%;
 	background-color: $header-background-color;
 	color: $header-color;
 	padding: 15px;
 }
 
+
+
+
+/*
+###########################
+          Header
+###########################
+*/
 header h1{
 	display: inline;
 }
@@ -60,4 +81,32 @@ nav li:hover {
 	padding: 15px 0;
 	margin-top: -15px;
 	margin-bottom: -15px;
+}
+
+
+
+
+
+/*
+###########################
+           Main
+###########################
+*/
+main section {
+	margin: 10px 0;
+}
+
+#home {
+	background: $main-background-color url("../img/landing-cliffs.jpg") no-repeat left top;
+	min-height: 100vh;
+	margin-top: 0;
+}
+
+#home h1 {
+	text-transform: uppercase;
+	color: #303030;
+	font-size: 2em;
+	font-weight: bold;
+	max-width: 285px;
+	line-height: 3.5rem;
 }
