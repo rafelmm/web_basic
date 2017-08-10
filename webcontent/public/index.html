@@ -11,6 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
         
     </head>
@@ -21,14 +22,15 @@
 
         
 		<header>
-			<h1>Web Basic</h1>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
+			<div class="header-container">
+				<h1><i class="fa fa-hashtag"></i>Web Basic</h1>
+				<div id="toggle" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+				<nav id="menu">
+					<a href="#">Home</a>
+					<a href="#">Projects</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
 		</header>
 		<main>
 			<section id="home">

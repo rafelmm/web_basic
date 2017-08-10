@@ -17,7 +17,7 @@ a {
 
 /*
 ###########################
-          Layout 
+          Header
 ###########################
 */
 header {
@@ -26,40 +26,30 @@ header {
   background-color: rgba(50, 50, 50, 0.9);
   color: #FFF;
   padding: 15px;
-}
-
-main {
-  width: 100%;
-  min-height: 100vh;
-}
-
-footer {
-  width: 100%;
-  background-color: rgba(50, 50, 50, 0.9);
-  color: #FFF;
-  padding: 15px;
-}
-
-/*
-###########################
-          Header
-###########################
-*/
-header h1 {
-  display: inline;
-}
-
-nav {
-  float: right;
-}
-
-nav li {
-  display: inline-block;
-  width: 150px;
   text-align: center;
 }
 
-nav li:hover {
+.header-container {
+  display: inline-block;
+}
+
+header h1 {
+  position: absolute;
+  left: 20vw;
+}
+
+nav {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 75px;
+  width: 10vw;
+  text-align: center;
+}
+
+nav a:hover {
   background-color: #333;
   cursor: pointer;
   padding: 15px 0;
@@ -67,28 +57,83 @@ nav li:hover {
   margin-bottom: -15px;
 }
 
+#toggle {
+  display: none;
+  cursor: pointer;
+}
+
+#toggle > div {
+  width: 30px;
+  height: 4px;
+  background-color: #d0d0d0;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 950px) {
+  header {
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 450px) {
+  header h1 {
+    left: 5vw;
+  }
+
+  #toggle {
+    display: inline-block;
+    position: absolute;
+    right: 5vw;
+    top: 7px;
+  }
+
+  nav {
+    visibility: hidden;
+  }
+}
 /*
 ###########################
            Main
 ###########################
 */
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
 main section {
   margin: 10px 0;
 }
 
 #home {
-  background: #e0e0e0 url("../img/landing-cliffs.jpg") no-repeat left top;
+  background: #e0e0e0 url("../img/landing-cliffs.jpg") no-repeat center top;
   min-height: 100vh;
   margin-top: 0;
 }
 
 #home h1 {
+  position: absolute;
+  margin-top: 45vh;
+  margin-left: 5vw;
   text-transform: uppercase;
-  color: #303030;
+  color: #FFFFFF;
   font-size: 2em;
   font-weight: bold;
   max-width: 285px;
   line-height: 3.5rem;
+}
+
+/*
+###########################
+          Footer
+###########################
+*/
+footer {
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #FFF;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=main.css.map */
