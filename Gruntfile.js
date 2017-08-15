@@ -51,6 +51,18 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+		uglify: {
+			dev: {
+				files: [{
+					expand: true,
+					flatten: true,
+					cwd: 'webcontent/src/js',
+					src: ['*.js'],
+					dest: 'webcontent/public/js',
+					ext: '.min.js'
+				}]
+			}
+		},
 		watch: {
 			sass:{
 				files: ['webcontent/src/css/sass/*.scss'],
@@ -59,6 +71,10 @@ module.exports = function (grunt) {
 			postcss:{
 				files: ['webcontent/src/css/*.css'],
 				tasks: ['postcss']
+			},
+			uflify:{
+				files: ['webcontent/src/js/*.js'],
+				tasks: ['uglify']
 			}
 		}
 	});
@@ -66,5 +82,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('default', ['watch']);
 };

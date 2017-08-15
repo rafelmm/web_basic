@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bootstrap-4.0.0-beta-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         
     </head>
@@ -21,28 +22,49 @@
         <![endif]-->
 
         
-		<header>
-			<div class="header-container">
-				<h1><i class="fa fa-hashtag"></i>Web Basic</h1>
-				<div id="toggle" onclick="toggleMenu()"><div></div><div></div><div></div></div>
-				<nav id="menu">
-					<a href="#">Home</a>
-					<a href="#">Projects</a>
-					<a href="#">Contact</a>
-				</nav>
-			</div>
-		</header>
-		<main>
+		
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><i class="fa fa-hashtag"></i>Web Basic</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    	<ul class="navbar-nav mr-auto">
+		      		<li class="nav-item active">
+		        		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		      		</li>
+				    <li class="nav-item">
+				    	<a class="nav-link" href="#">Proyectos</a>
+				    </li>
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="#">Contacto</a>
+		      		</li>
+		    	</ul>
+		  	</div>
+		</nav>
+		
+		<main class="main-container container-fluid">
 			<section id="home">
-				<h1>Let us build your website</h1>
+				<h1>Construimos tu sitio web</h1>
 			</section>
-			<section>
-				<h3>Section Header</h3>
-				<p>Section content</p>
+			<section class="row">
+				<div class="col d-sm-none d-md-block">
+					<img class="section-img" src="img/responsive-nobg.png" alt="Accesible desde cualquier dispositivo"/>
+					</div>
+				</div>
+				<div class="col section-text">
+					<h3>Accesible desde cualquier dispositivo</h3>
+					<p>Nuestros diseños son responsive para que se vea de la mejor forma posible desde cualquier dispositivo. No te pierdas ni un cliente con nuestros diseños accesibles.</p>
+				</div>
 			</section>
-			<section>
-				<h3>Section Header</h3>
-				<p>Section content</p>
+			<section class="row">
+				<div class="col section-text">
+					<h3>Totalmente personalizado</h3>
+					<p>Entendemos la web como algo totalmente personal. Por eso no usamos plantillas sinó que diseñamos la mejor web para que se adapte totalmente a las necesidades de nuestros clientes.</p>
+				</div>
+				<div class="col d-sm-none d-md-block">
+				</div>
 			</section>
 		</main>
 		<footer>
@@ -52,8 +74,11 @@
 		
         <script src="js/bower_components/jquery/dist/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="bootstrap-4.0.0-beta-dist/js/bootstrap.min.js"></script>
+		<script src="js/plugins.min.js"></script>
+        <script src="js/main.min.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
