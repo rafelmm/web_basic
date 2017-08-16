@@ -58,12 +58,35 @@ a {
   margin: auto 0;
 }
 
+@-webkit-keyframes background-horizontal-slide {
+  from {
+    background-position: -20px 0;
+    background-size: 100% auto;
+  }
+  to {
+    background-position: 0px 0;
+    background-size: 105% auto;
+  }
+}
+
+@keyframes background-horizontal-slide {
+  from {
+    background-position: -20px 0;
+    background-size: 100% auto;
+  }
+  to {
+    background-position: 0px 0;
+    background-size: 105% auto;
+  }
+}
 #home {
-  background: #e0e0e0 url("../img/landing-cliffs.jpg") no-repeat center top;
+  background: #e0e0e0 url("../img/main00.jpg") no-repeat -20px 0;
   min-height: 100vh;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
+  -webkit-animation: background-horizontal-slide 10s steps(120) forwards;
+          animation: background-horizontal-slide 10s steps(120) forwards;
 }
 #home h1 {
   position: absolute;

@@ -4,6 +4,7 @@ $main-color: #333;
 $header-background-color: rgba(50,50,50,0.9);
 $header-color: #FFF;
 $default-padding: 10px;
+$initial-background-left: -20px;
 
 
 /*
@@ -72,12 +73,24 @@ a {
 	margin: auto 0;
 }
 
+@keyframes background-horizontal-slide {
+	from {
+		background-position: $initial-background-left 0;
+		background-size: 100% auto;
+	}
+	to {
+		background-position: 0px 0;
+		background-size: 105% auto;
+	}
+}
+
 #home {
-	background: $main-background-color url("../img/landing-cliffs.jpg") no-repeat center top;
+	background: $main-background-color url("../img/main00.jpg") no-repeat $initial-background-left 0;
 	min-height: 100vh;
 	margin-top: 0;
 	margin-left: 0;
 	margin-right: 0;
+	animation: background-horizontal-slide 10s steps(120) forwards;
 	
 	h1 {
 		position: absolute;
