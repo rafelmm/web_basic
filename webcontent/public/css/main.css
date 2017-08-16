@@ -10,9 +10,17 @@ body {
   width: 100%;
 }
 
+.offset-sm-2 {
+  margin-left: 16.66%;
+}
+
 @media screen and (max-width: 575px) {
   body {
     font-size: 18px;
+  }
+
+  .offset-sm-2 {
+    margin-left: 0;
   }
 }
 a {
@@ -46,49 +54,10 @@ a {
   margin: 50px 24px;
   margin: 50px 1.5rem;
 }
-
-.section-img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 80%;
+.main-container section.carousel {
+  margin: 0;
 }
-
-.section-text {
-  margin: auto 0;
-}
-
-@-webkit-keyframes background-horizontal-slide {
-  from {
-    background-position: -20px 0;
-    background-size: 100% auto;
-  }
-  to {
-    background-position: 0px 0;
-    background-size: 105% auto;
-  }
-}
-
-@keyframes background-horizontal-slide {
-  from {
-    background-position: -20px 0;
-    background-size: 100% auto;
-  }
-  to {
-    background-position: 0px 0;
-    background-size: 105% auto;
-  }
-}
-#home {
-  background: #e0e0e0 url("../img/main00.jpg") no-repeat -20px 0;
-  min-height: 100vh;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  -webkit-animation: background-horizontal-slide 10s steps(120) forwards;
-          animation: background-horizontal-slide 10s steps(120) forwards;
-}
-#home h1 {
+.main-container section.carousel h1 {
   position: absolute;
   margin-top: 45vh;
   margin-left: 5vw;
@@ -99,6 +68,25 @@ a {
   max-width: 285px;
   line-height: 56px;
   line-height: 3.5rem;
+  z-index: 5;
+}
+.main-container section.carousel .carousel-inner {
+  height: 100vh;
+  min-width: 100%;
+  overflow: hidden;
+}
+.main-container section.carousel .carousel-inner img {
+  min-width: 100%;
+  min-height: 100vh;
+}
+.main-container .section-img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 80%;
+}
+.main-container .section-text {
+  margin: auto 0;
 }
 
 /*

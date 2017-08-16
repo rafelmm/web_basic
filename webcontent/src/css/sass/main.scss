@@ -1,10 +1,4 @@
-
-$main-background-color: #e0e0e0;
-$main-color: #333;
-$header-background-color: rgba(50,50,50,0.9);
-$header-color: #FFF;
-$default-padding: 10px;
-$initial-background-left: -20px;
+@import 'helper/variables';
 
 
 /*
@@ -19,9 +13,17 @@ body {
 	width: 100%;
 }
 
+.offset-sm-2 {
+	margin-left: 16.66%;
+}
+
 @media screen and (max-width: 575px) {
 	body {
 		font-size: 18px;
+	}
+	
+	.offset-sm-2 {
+		margin-left:0;
 	}
 }
 
@@ -60,51 +62,47 @@ a {
 	section {
 		margin: 50px 1.5rem;
 	}
-}
-
-.section-img{
-	display: block;
-	margin: 0 auto;
-	border-radius: 50%;
-	width: 80%;
-}
-
-.section-text {
-	margin: auto 0;
-}
-
-@keyframes background-horizontal-slide {
-	from {
-		background-position: $initial-background-left 0;
-		background-size: 100% auto;
-	}
-	to {
-		background-position: 0px 0;
-		background-size: 105% auto;
-	}
-}
-
-#home {
-	background: $main-background-color url("../img/main00.jpg") no-repeat $initial-background-left 0;
-	min-height: 100vh;
-	margin-top: 0;
-	margin-left: 0;
-	margin-right: 0;
-	animation: background-horizontal-slide 10s steps(120) forwards;
 	
-	h1 {
-		position: absolute;
-		margin-top: 45vh;
-		margin-left: 5vw;
-		text-transform: uppercase;
-		color: #FFFFFF;
-		font-size: 2em;
-		font-weight: bold;
-		max-width: 285px;
-		line-height: 3.5rem;
+	section.carousel {
+		margin: 0;
+		
+		h1 {
+			position: absolute;
+			margin-top: 45vh;
+			margin-left: 5vw;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			font-size: 2em;
+			font-weight: bold;
+			max-width: 285px;
+			line-height: 3.5rem;
+			z-index:5;
+		}
+		
+		.carousel-inner {
+			height: 100vh;
+			min-width:100%;
+			overflow: hidden;
+			
+			img {
+				min-width: 100%;
+				min-height: 100vh;
+			}
+		}
 	}
-}
+	
+	.section-img{
+		display: block;
+		margin: 0 auto;
+		border-radius: 50%;
+		width: 80%;
+	}
 
+	.section-text {
+		margin: auto 0;
+	}
+
+}
 
 
 /*
